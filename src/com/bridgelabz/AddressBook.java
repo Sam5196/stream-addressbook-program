@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class AddressBook {
     Scanner sc = new Scanner(System.in);
-    private Contacts contactBook[];
+    private ContactPerson contactBook[];
     private int numberOfConatcts = 0;
 
     AddressBook() {
-        this.contactBook = new Contacts[20];
+        this.contactBook = new ContactPerson[20];
     }
 
     public void addContacts() {
@@ -29,7 +29,7 @@ public class AddressBook {
         int phoneNumber = sc.nextInt();
         System.out.println("Enter Zip");
         int zip = sc.nextInt();
-        contactBook[numberOfConatcts] = new Contacts(firstName, lastName, address, state, city, email, phoneNumber,
+        contactBook[numberOfConatcts] = new ContactPerson(firstName, lastName, address, state, city, email, phoneNumber,
                 zip);
         numberOfConatcts++;
         display();
@@ -91,6 +91,7 @@ public class AddressBook {
         }
         display();
     }
+
     public void delete() {
         int index;
         System.out.println("Enter the name of the contact to delete");
@@ -106,9 +107,18 @@ public class AddressBook {
         contactBook[index] = null;
         System.out.println("Deleted details of : " + name);
     }
+
     public void display() {
         for (int index = 0; index < numberOfConatcts; index++) {
             System.out.println(contactBook[index]);
+        }
+    }
+
+    public void addMultipleContacts() {
+        System.out.println("Enter number of contacts to Add");
+        int number = sc.nextInt();
+        for (int i = 0; i < number; i++) {
+            addContacts();
         }
     }
 }
