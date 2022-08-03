@@ -1,4 +1,5 @@
 package com.bridgelabz;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -193,8 +194,10 @@ public class AddressBookMain {
                 addressBookSystem.put(yourBookname, addressbook);
             }
         }
+
         System.out.println("Contact deleted Successfully");
     }
+
     public void addMultipleContacts() {
 
         List<Contact> contacts = new ArrayList<>();
@@ -245,9 +248,12 @@ public class AddressBookMain {
                 System.out.println("Please Enter correct choice");
 
         }
+
         addressbooks.displayContacts(addressBookSystem);
         addressbooks.addContacts();
+
     }
+
     public void addtoOurAdrressBook(Contact contact, String addressBookName) {
         List<Contact> contactsLis = new ArrayList<>();
         AddressBook Addressvalues = new AddressBook();
@@ -258,7 +264,9 @@ public class AddressBookMain {
             boolean isPresent = contactDetails.stream()
                     .anyMatch(con -> con.getFirstName().equals(contact.getFirstName()));
             if (isPresent) {
-                System.out.println("This person name already present");
+
+                System.out.println("This peson name already persent");
+
             } else {
                 contactDetails.add(contact);
                 values.setContacts(contactDetails);
@@ -271,5 +279,4 @@ public class AddressBookMain {
             addressBookSystem.put(addressBookName, Addressvalues);
         }
     }
-
 }
