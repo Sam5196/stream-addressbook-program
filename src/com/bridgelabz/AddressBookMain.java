@@ -17,6 +17,9 @@ public class AddressBookMain {
                 case 2:
                     addressBook.edit();
                     break;
+                case 3:
+                    addressBook.delete();
+                    break;
                 default:
                     System.out.println("Enter valid Number");
             }
