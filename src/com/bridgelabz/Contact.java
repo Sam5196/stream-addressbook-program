@@ -3,32 +3,14 @@ public class Contact {
 
     private String firstName;
     private String lastName;
-    private String address;
-    private String city;
-    private String state;
-    private int zip;
-    private long phoneNumber;
+    private String phoneNumber;
     private String email;
-
-    public Contact() {
-
-    }
-
-    public Contact(String firstName, String lastName, String address, String city, String state, int zip,
-                   long phoneNumber, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-    }
+    private String city;
+    private String zip;
+    private String state;
 
     public String getFirstName() {
         return firstName;
-
     }
 
     public void setFirstName(String firstName) {
@@ -43,43 +25,11 @@ public class Contact {
         this.lastName = lastName;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public int getZip() {
-        return zip;
-    }
-
-    public void setZip(int zip) {
-        this.zip = zip;
-    }
-
-    public long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -90,4 +40,35 @@ public class Contact {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    @Override
+    public String toString() {
+        return "Contact [firstName=" + firstName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber
+                + ", email=" + email + ", city=" + city + ", zip=" + zip + ", state=" + state + "]";
+    }
+
 }
